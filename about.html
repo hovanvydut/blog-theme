@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/setting.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Muli:400,500,600,700|Open+Sans:400,600,700|Playfair+Display:400,600,700&display=swap"
+        rel="stylesheet">
+    <title>My Blog</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="toggle-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <nav>
+                <ul class="main-menu">
+                    <li class="main-menu__item active">
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="/fashion.html">Fashion</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="/travel.html">Travel</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="logo">
+                <img src="./images/logo.png" alt="logo" />
+            </div>
+
+            <div class="footer">
+                <div class="subscribe-form">
+                    <h3>Subscribe for newsletter</h3>
+                    <div>
+                        <input type="text" autocomplete="false" placeholder="Enter Email Address" />
+                        <!-- <img src="./images/paper-plane.svg" alt="paper-plane-icon" /> -->
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>
+                        Copyright ©2020 All rights reserved | This template
+                        is made with
+                        <i class="fas fa-heart"></i> by
+                        hovanvydut
+                    </p>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main class="fashion-page">
+            <section class="posts">
+                About html
+            </section>
+        </main>
+    </div>
+    <div class="loader-container" id="loader">
+        <div class="loader-overlay"></div>
+        <div class="temp">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                document.querySelector("body").style.visibility = "hidden";
+                document.querySelector("#loader").style.visibility = "visible";
+            } else {
+                setTimeout(() => {
+                    document.querySelector("#loader").style.display = "none";
+                    document.querySelector("body").style.visibility = "visible";
+                }, 1000)
+            }
+        };
+    </script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
